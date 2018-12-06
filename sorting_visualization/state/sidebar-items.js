@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["ArrayAccess",""],["SharedState","A wrapper around [`State`] that can be safely shared between threads."],["State","Contains the state of the whole app."]]});

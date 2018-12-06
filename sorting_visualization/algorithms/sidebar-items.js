@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["bubble","Bubble sort"],["cycle","Cycle sort"],["gnome","Gnome sort"],["insertion","Insertion sort"],["quicksort","Quicksort"],["selection","Selection sort"],["shell","Shell sort"]],"trait":[["Algorithm","The general trait for all sorting algorithms."]]});
