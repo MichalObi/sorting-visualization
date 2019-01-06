@@ -7,9 +7,10 @@ pub struct BubbleSort;
 
 impl Algorithm for BubbleSort {
   fn sort(&self, array: Array) {
-    let len = array.len();
-    for i in 0..len - 1 {
-      let last = len - i - 1;
+    let len = array.len(); //length of array to be sort
+    // the last elem will be sorted if all other elem will be - that's why len - 1
+    for i in 0..len -1 {
+      let last = len - 1 - i; // last element of array
       array.set_color(last, [0.0, 1.0, 0.0, 0.8]);
 
       for j in 0..last {
