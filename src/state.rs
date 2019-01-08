@@ -11,6 +11,7 @@ pub struct SharedState(Arc<Mutex<State>>);
 
 impl SharedState {
   pub fn new(state: State) -> Self {
+    print!("state {:?}", state);  
     SharedState(Arc::new(Mutex::new(state)))
   }
 
