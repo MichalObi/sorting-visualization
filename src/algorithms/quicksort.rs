@@ -7,7 +7,7 @@ pub struct Quicksort;
 
 impl Algorithm for Quicksort {
   fn sort(&self, array: Array) {
-      // isize = 8 bytes for x64 target
+    // isize = 8 bytes for x64 target
     self.sort_slice(&array, 0, array.len() as isize - 1); // 0 is min 100 is max
   }
 
@@ -16,13 +16,17 @@ impl Algorithm for Quicksort {
   }
 }
 
-// divide and conquer type of algo
+// "divide and conquer" type of algorithm
+
 impl Quicksort {
-  #[allow(clippy::range_minus_one)]
+  #[allow(clippy::range_minus_one)] // clippy allow additional linting
+
   // current array, lowest and highest - this fn has recursive calls
   fn sort_slice(&self, array: &Array, low: isize, high: isize) {
-    // if low high array will be sorted, and no need for another recursive call
+
+    // if false array will be sorted, and no need for another recursive call
     if low < high {
+
       // pick a pivot - key process of Quicksort
       let pivot = self.partition(array, low, high);
       print!("pivot {:?}", pivot);
@@ -62,11 +66,11 @@ impl Quicksort {
   }
 
   fn partition(&self, array: &Array, low: isize, high: isize) -> isize {
-    let pivot = array.get(high as usize);
+    let pivot = array.get(high as usize); // pivot around highest array vak=lue
     let mut i = low;
     for j in low..high {
       if array.get(j as usize) <= pivot {
-        array.swap(i as usize, j as usize);
+        array.swap(i as usize, j as usize); // change order of lowest to the beginning
         i += 1; // increment lowest
       }
       array.wait(15);

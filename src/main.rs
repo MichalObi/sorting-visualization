@@ -65,7 +65,7 @@ fn run() -> Result<(), Error> {
     .context("couldn't create window")?;
   let mut gl = GlGraphics::new(OPENGL_VERSION);
 
-  let mut array: Vec<u32> = (1*2..=length).collect();
+  let mut array: Vec<u32> = (1 * 2..=length).collect();
 
   match order {
     Order::Sorted => {}
